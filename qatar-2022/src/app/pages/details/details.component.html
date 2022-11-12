@@ -1,0 +1,36 @@
+<player-header></player-header>
+
+<main>
+
+
+    <section class="product__names">
+      <h1 class="slideInLeft">{{products.name}}</h1>
+      <h2 class="slideInRight">{{products.name}}</h2>
+    </section>
+
+    <section class="product_status">
+      <img
+        [src]="products.img"
+        class="slideInDown"
+      >
+
+      <article class="product_status__statistics fadeIn">
+        <section>
+          <h3>R$ {{products.price}}</h3>
+          {{products.description}}
+        </section>
+
+      <section class="espacamentoBtn">
+        <a [href]="apiWhatsapp" target="_blank" class="btn btn__third">
+          Tenho interesse
+        </a>
+      </section>
+        <a [routerLink]="['']" class="btn btn__secondary">
+          Voltar
+        </a>
+      </article>
+    </section>
+
+
+
+</main>

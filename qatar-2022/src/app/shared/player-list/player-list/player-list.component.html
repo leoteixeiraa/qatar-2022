@@ -1,0 +1,23 @@
+<player-search (emmitSearch)="getSearch($event)"></player-search>
+
+<section class="listagem">
+<ng-template ngFor let-products [ngForOf]="getAllProducts">
+<a [routerLink]="['details', products.id]" class="product" *ngIf="products">
+  <section class="product__status">
+    <h2>
+      {{products.name}}
+    </h2>
+
+    <ul>
+      <li>
+        {{products.status1}}
+      </li>
+      <li> {{products.status2}}</li>
+    </ul>
+  </section>
+  <section class="product__image">
+    <img [src]="products.image" alt="Teste de Produto ">
+  </section>
+</a>
+</ng-template>
+</section>
