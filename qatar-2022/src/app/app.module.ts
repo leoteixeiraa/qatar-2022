@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { PagesModule } from './pages/pages.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,7 @@ import { PlayerHeaderComponent } from './shared/player-header/player-header/play
 import { PlayerListComponent } from './shared/player-list/player-list/player-list.component';
 import { PlayerSearchComponent } from './shared/player-search/player-search/player-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
